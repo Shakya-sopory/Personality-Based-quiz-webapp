@@ -50,7 +50,7 @@ Open in browser
 ```
 https://personality-based-quiz.vercel.app/
 ```
-Project Structure
+## Project Structure
 ```
 src/
  ├── components/
@@ -61,14 +61,15 @@ src/
  ├── App.jsx
  └── main.jsx
 ```
-Future Improvements
+## Future Improvements
 -More quiz categories
 -Dark mode
 -Progress bar
 -Animations
 -Sound effects
 -Leaderboard
-Author
+
+## Author
 
 Shakya Sopory
 
