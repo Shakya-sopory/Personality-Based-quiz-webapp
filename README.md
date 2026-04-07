@@ -1,18 +1,36 @@
-# React + Vite
+# Personality Quiz Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A BuzzFeed-style personality quiz web app built with React and Tailwind CSS.  
+Take quizzes from different universes and discover which character matches your personality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Multiple quizzes (Marvel, DC, LOTR)
+- Personality-based scoring system
+- Character result with image
+- Personality traits (strength, weakness, type)
+- Random quiz button
+- Responsive modern UI
+- Vibrant colorful design
+- Take another quiz option
+- Share result feature
 
-## React Compiler
+## Quizzes Included
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Marvel Characters
+- DC Characters
+- Lord of the Rings Characters
 
-Note: This will impact Vite dev & build performances.
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Tailwind CSS
+- Vite
+- JavaScript
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+Clone the repo
+
+```bash
+git clone https://github.com/Shakya-sopory/Personality-Based-quiz-webapp.git
