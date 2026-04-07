@@ -43,9 +43,9 @@ Install dependencies
 npm install
 ```
 Run the app
-
+```
 npm run dev
-
+```
 Open in browser
 ```
 https://personality-based-quiz.vercel.app/
