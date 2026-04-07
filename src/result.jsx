@@ -21,14 +21,12 @@ function Result({ result, goHome }) {
           {result.desc}
         </p>
 
-        {/* Personality traits */}
         <div className="bg-gray-100 rounded-xl p-4 mb-6 text-left">
           <p><span className="font-semibold">Strength:</span> {result.traits.strength}</p>
           <p><span className="font-semibold">Weakness:</span> {result.traits.weakness}</p>
           <p><span className="font-semibold">Type:</span> {result.traits.type}</p>
         </div>
 
-        {/* Share button */}
         <button
         onClick={()=>{
           navigator.clipboard.writeText(
