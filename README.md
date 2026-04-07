@@ -62,12 +62,12 @@ src/
  └── main.jsx
 ```
 ## Future Improvements
--More quiz categories
--Dark mode
--Progress bar
--Animations
--Sound effects
--Leaderboard
+- More quiz categories
+- Dark mode
+- Progress bar
+- Animations
+- Sound effects
+- Leaderboard
 
 ## Author
 
