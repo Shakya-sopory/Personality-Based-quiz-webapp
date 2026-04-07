@@ -34,3 +34,42 @@ Clone the repo
 
 ```bash
 git clone https://github.com/Shakya-sopory/Personality-Based-quiz-webapp.git
+```
+## Getting Started
+
+Install dependencies
+
+```bash
+npm install
+```
+Run the app
+
+npm run dev
+
+Open in browser
+```
+https://personality-based-quiz.vercel.app/
+```
+Project Structure
+```
+src/
+ ├── components/
+ │   ├── marvel_quiz.jsx
+ │   ├── DC_quiz.jsx
+ │   └── lotr_quiz.jsx
+ ├── result.jsx
+ ├── App.jsx
+ └── main.jsx
+```
+Future Improvements
+-More quiz categories
+-Dark mode
+-Progress bar
+-Animations
+-Sound effects
+-Leaderboard
+Author
+
+Shakya Sopory
+
+Built using React and Tailwind CSS.
