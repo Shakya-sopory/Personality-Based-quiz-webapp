@@ -121,19 +121,7 @@ const [scores,setScores]=useState({
 aragorn:0,gandalf:0,frodo:0,legolas:0,gimli:0
 });
 
-const handleAnswer=(char)=>{
-const newScores={...scores,[char]:scores[char]+1};
-setScores(newScores);
-
-if(index+1===questions.length){
-const winner=Object.keys(newScores).reduce((a,b)=>
-newScores[a]>newScores[b]?a:b
-);
-setResult(results[winner]);
-}else{
-setIndex(index+1);
-}
-};
+const [selected,setSelected]=useState(null)
 
 return (
 <div className="min-h-screen bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center p-6">
@@ -149,8 +137,10 @@ return (
 {questions[index].answers.map((a,i)=>(
 <button
 key={i}
-onClick={()=>handleAnswer(a.character)}
-className="w-full text-left p-4 border rounded-xl hover:bg-purple-50 hover:border-purple-400 transition font-medium"
+onClick={()=>setSelected(a.character)}
+className={`w-full text-left p-4 rounded-xl border transition font-medium
+${selected===a.character ? "bg-purple-100 border-purple-400" : "hover:bg-purple-50"}
+`}
 >
 {a.text}
 </button>
@@ -158,7 +148,64 @@ className="w-full text-left p-4 border rounded-xl hover:bg-purple-50 hover:borde
 
 </div>
 
-<div className="mt-6 text-center text-sm text-gray-500">
+<div className="flex gap-3 mt-6">
+
+<button
+onClick={()=>setIndex(index-1)}
+disabled={index===0}
+className="flex-1 border py-2 rounded-xl disabled:opacity-40"
+>
+Previous
+</button>
+
+{index === questions.length-1 ? (
+
+<button
+className="flex-1 bg-green-600 text-white py-2 rounded-xl"
+onClick={()=>{
+if(!selected){
+alert("Please select an option")
+return
+}
+
+if(!confirm("Are you sure you want to submit?")) return
+
+const newScores={...scores,[selected]:scores[selected]+1}
+
+const winner=Object.keys(newScores).reduce((a,b)=>
+newScores[a]>newScores[b]?a:b
+)
+
+setResult(results[winner])
+}}
+>
+Submit
+</button>
+
+) : (
+
+<button
+className="flex-1 bg-purple-600 text-white py-2 rounded-xl"
+onClick={()=>{
+if(!selected){
+alert("Please select an option")
+return
+}
+
+const newScores={...scores,[selected]:scores[selected]+1}
+setScores(newScores)
+setSelected(null)
+setIndex(index+1)
+}}
+>
+Next
+</button>
+
+)}
+
+</div>
+
+<div className="mt-4 text-center text-sm text-gray-500">
 Question {index + 1} / {questions.length}
 </div>
 
